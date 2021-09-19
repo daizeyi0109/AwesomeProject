@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,useState,useEffect } from "react";
 
 import {
   Image,
@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { Fontisto } from "@expo/vector-icons";
+import {API, graphqlOptions } from "aws-amplify";
+import {listTodos} from "../../src/graphql/queries"
 
 const REQUEST_URL =
   "https://raw.githubusercontent.com/facebook/react-native/0.51-stable/docs/MoviesExample.json";
@@ -39,6 +41,7 @@ export default class SampleAppMovies extends Component {
           data: this.state.data.concat(responseData.movies),
           loaded: true,
         });
+        console.log(this.state.data);
       });
   }
 
