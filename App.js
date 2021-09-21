@@ -7,15 +7,6 @@ import SearchResultsScreen from "./screens/recommendlist/postlist";
 import feed from "./assets/data/feed";
 
 function App() {
-    return ( < Navigator > </Navigator>);
-        {/* // return (
-        //   <>
-        //     <SafeAreaView>
-        //       <SearchResultsScreen />
-        //     </SafeAreaView>
-        //   </>
-        // ); */}
-    }
-
-    {/* // export default withAuthenticator(App); */}
+    return (< Navigator> </Navigator>);
+}
 export default App;
