@@ -6,9 +6,9 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import  SearchResultsScreen from "../searchlist/postlistSearch.js";
 
 const SearchScreen = ({ navigation }) => {
   return (
@@ -47,7 +47,7 @@ const SearchScreen = ({ navigation }) => {
         <Text
           style={{
             fontSize: 13,
-            fontWeight: "3",
+            // fontWeight: "3",
             fontFamily: "Verdana",
             fontWeight: "bold",
           }}
@@ -55,6 +55,7 @@ const SearchScreen = ({ navigation }) => {
           MAYBE YOU WANT...
         </Text>
       </View>
+      <SearchResultsScreen/>
     </View>
   );
 };

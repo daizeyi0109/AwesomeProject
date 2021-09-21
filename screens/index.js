@@ -109,7 +109,7 @@ function IndexScreen() {
           ),
         })}
       />
-    
+
     </indexStack.Navigator>
   );
 }
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
   button: {
     position: "absolute",
     flexDirection: "row",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
     width: 343,
     height: 52,
     top: 727,

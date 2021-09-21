@@ -14,7 +14,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { Foundation } from "@expo/vector-icons";
 
-const Post = (props) => {
+const PostSearch = (props) => {
   // console.log(props);
 
   const post = props.post;
@@ -69,7 +69,7 @@ const Post = (props) => {
 const styles = StyleSheet.create({
   container: {
     // margin: 20,
-    marginTop: 20,
+    marginTop: 15,
     marginBottom: 20,
     backgroundColor: "#fff",
     borderRadius: 10,
@@ -106,4 +106,4 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline",
   },
 });
-export default Post;
+export default PostSearch;

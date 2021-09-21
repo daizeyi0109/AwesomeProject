@@ -10,11 +10,9 @@ import {
   Dimensions,
   ScrollView,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Swiper from "react-native-swiper";
-import SampleAppMovies from "./flatlist";
-import SearchResultsScreen from "../search/postlist"
+import RecommendResultsScreen from "../recommendlist/postlist";
+
 
 const RecommendScreen = ({ navigation }) => {
   return (
@@ -37,8 +35,8 @@ const RecommendScreen = ({ navigation }) => {
               fontSize: 40,
               fontFamily: "Futura",
               shadowColor: "rgba(0,0,0,0.5)",
-              shadowOffset: { width: 4, height: 4 },
-              shadowOpacity: 0.67,
+              shadowOffset: { width: 4, height: 4 }, 
+              shadowOpacity: 0.67, 
             }}
           >
             Recommend
@@ -132,9 +130,7 @@ const RecommendScreen = ({ navigation }) => {
           </Text>
         </View>
 
-        <SafeAreaView>
-          <SearchResultsScreen />
-        </SafeAreaView>
+        <RecommendResultsScreen/>
       </ScrollView>
     </View>
   );
