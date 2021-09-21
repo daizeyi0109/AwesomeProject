@@ -1,9 +1,18 @@
-type Todo @model {
+type Post @model @aws_api_key{
   id: ID!
-  img: String!
 
+  image: String!
+  type: String!
   title: String!
   description: String!
-  
-  price: Float!
+
+  bed: Int!
+  bedroom: Int!
+  maxGuests: Int!
+
+  oldPrice: Float
+  newPrice: Float!
+
+  latitude: Float!
+  longitude: Float!
 }

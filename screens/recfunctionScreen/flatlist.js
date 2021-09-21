@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { AntDesign } from '@expo/vector-icons';
 import { Fontisto } from "@expo/vector-icons";
-import {API, graphqlOptions } from "aws-amplify";
+import {API, graphqlOperation } from "aws-amplify";
 import {listTodos} from "../../src/graphql/queries"
 
 const REQUEST_URL =
@@ -91,6 +91,50 @@ export default class SampleAppMovies extends Component {
   }
 }
 
+
+
+// import React, { Component,useState,useEffect } from "react";
+
+// import {
+//   Image,
+//   FlatList,
+//   StyleSheet,
+//   Text,
+//   View,
+//   TouchableOpacity,
+// } from "react-native";
+// import { AntDesign } from '@expo/vector-icons';
+// import { Fontisto } from "@expo/vector-icons";
+// import {API, graphqlOperation } from "aws-amplify";
+// import {listTodos} from "../../src/graphql/queries"
+
+// const SampleAppMovies = (props) => {
+
+//   const [post, setPost] = useState([]);
+
+//   useEffect(()=>{
+//     const fetchPost  = async () => {
+//       try{
+        
+//         const postResult = await API.graphql(
+//           graphqlOperation(listTodos)
+//         )
+
+//         setPost (postResult.data.listTodos.items)
+
+//       } catch(e)
+//       {
+//         console.log(e)
+//       }
+//     }
+//   })
+
+//   return(
+
+//     <></>
+//   )
+// }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -130,3 +174,4 @@ const styles = StyleSheet.create({
     paddingRight: 50,
   },
 });
+

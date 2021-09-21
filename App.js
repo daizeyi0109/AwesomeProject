@@ -1,14 +1,20 @@
 import * as React from "react";
+import { SafeAreaView } from "react-native";
 import IndexScreen from "./screens/index";
 import Navigator from "./navigation/nav_01";
-
-// import config from './src/aws-exports'
-// import Amplify from 'aws-amplify'
-// import { withAuthenticator } from 'aws-amplify-react-native'
-// Amplify.configure(config)
+import Post from "./screens/search/post";
+import SearchResultsScreen from "./screens/search/postlist";
+import feed from "./assets/data/feed";
 
 function App() {
   return (<Navigator></Navigator>);
+  // return (
+  //   <>
+  //     <SafeAreaView>
+  //       <SearchResultsScreen />
+  //     </SafeAreaView>
+  //   </>
+  // );
 }
 
 // export default withAuthenticator(App);
