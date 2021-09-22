@@ -11,6 +11,7 @@ import {
 import  SearchResultsScreen from "../searchlist/postlistSearch";
 
 const SearchScreen = ({ navigation }) => {
+  const [inputText,setInputText] = useState ("");
   return (
     <View
       style={{
@@ -37,13 +38,15 @@ const SearchScreen = ({ navigation }) => {
 
       <TextInput
         style={styles.input}
-        placeholder="Search"
+        placeholder="WHAT YOU WANT？"
         placeholderTextColor="#ccc"
         keyboardType="default"
         returnKeyType="next"
+        value = {inputText}
+        onChangeText = {setInputText}
       />
       {/* MAYBE YOU WANT...*/}
-      <View style={styles.title_type}>
+      <View >
         <Text
           style={{
             fontSize: 13,
