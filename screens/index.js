@@ -1,28 +1,28 @@
 import React from "react";
-import {Image, StyleSheet, TouchableOpacity, View,} from "react-native";
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import { Image, StyleSheet, TouchableOpacity, View, } from "react-native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Register from "./register";
 import Login from "./login";
 import RegisterType from "./registerType";
-import {Auth} from "aws-amplify";
+import { Auth } from "aws-amplify";
 
 // Sign-UP
 
 
 //  Index.page
-const Index = ({navigation}) => {
+const Index = ({ navigation }) => {
     const SignUp = () => {
         Auth.signUp();
     };
     return (
-        <View style={{justifyContent: "center"}}>
-            <View style={{position: "relative"}}>
+        <View style={{ justifyContent: "center" }}>
+            <View style={{ position: "relative" }}>
                 <Image
                     source={require("../assets/images/i2L2eWqrSxs.jpg")}
                     style={styles.Indeximg}
                 />
 
-                <View style={{position: "absolute"}}>
+                <View style={{ position: "absolute" }}>
                     <Image
                         source={require("../assets/images/logo.png")}
                         style={styles.logo}
@@ -32,7 +32,7 @@ const Index = ({navigation}) => {
                 <View style={styles.button}>
                     {/* <TouchableOpacity onPress={() => navigation.navigate("Login")}> */}
                     <TouchableOpacity onPress={() => navigation.navigate("BottomTabStack")}>
-                        <Image source={require("../assets/images/go.png")}/>
+                        <Image source={require("../assets/images/go.png")} />
                     </TouchableOpacity>
 
                     {/* <TouchableOpacity
@@ -57,18 +57,18 @@ function IndexScreen() {
             <indexStack.Screen
                 name="Index"
                 component={Index}
-                options={{headerShown: false}}
+                options={{ headerShown: false }}
             />
             <indexStack.Screen
                 name="Register"
                 component={Register}
-                options={({navigation}) => ({
+                options={({ navigation }) => ({
                     headerTransparent: true,
                     headerTitle: "",
                     headerBackTitle: "",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.navigate("Index")}>
-                            <Image source={require("../assets/images/backicon.png")}/>
+                            <Image source={require("../assets/images/backicon.png")} />
                         </TouchableOpacity>
                     ),
                 })}
@@ -76,13 +76,13 @@ function IndexScreen() {
             <indexStack.Screen
                 name="Login"
                 component={Login}
-                options={({navigation}) => ({
+                options={({ navigation }) => ({
                     headerTransparent: true,
                     headerTitle: "",
                     headerBackTitle: "",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.navigate("Index")}>
-                            <Image source={require("../assets/images/backicon.png")}/>
+                            <Image source={require("../assets/images/backicon.png")} />
                         </TouchableOpacity>
                     ),
                 })}
@@ -90,13 +90,13 @@ function IndexScreen() {
             <indexStack.Screen
                 name="RegisterType"
                 component={RegisterType}
-                options={({navigation}) => ({
+                options={({ navigation }) => ({
                     headerTransparent: true,
                     headerTitle: "",
                     headerBackTitle: "",
                     headerLeft: () => (
                         <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-                            <Image source={require("../assets/images/backicon.png")}/>
+                            <Image source={require("../assets/images/backicon.png")} />
                         </TouchableOpacity>
                     ),
                 })}

@@ -96,7 +96,14 @@ function RegisterType({ navigation }) {
   };
 
   return (
-    <View style={{position: 'absolute',width:343,left:"50%",marginLeft:-172}}>
+    <View
+      style={{
+        position: "absolute",
+        width: 343,
+        left: "50%",
+        marginLeft: -172,
+      }}
+    >
       {/* Title */}
       <View style={styles.title}>
         <Text style={{ fontSize: 40, fontFamily: "Futura" }}>Register</Text>
@@ -178,14 +185,15 @@ function RegisterType({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.input_icon} onPress={() => navigation.navigate("BottomTabStack")}>
+      <TouchableOpacity
+        style={styles.input_icon}
+        onPress={() => navigation.navigate("BottomTabStack")}
+      >
         <Image source={require("../assets/images/signup.png")} />
       </TouchableOpacity>
 
-      <View style={[styles.title_type,{width:365}]}>
-        <Text
-          style={{ fontSize: 14, fontFamily: "Futura" }}
-        >
+      <View style={[styles.title_type, { width: 365 }]}>
+        <Text style={{ fontSize: 14, fontFamily: "Futura" }}>
           By signing up, you agree to Photo’s Terms of Service and Privacy
           Policy
         </Text>
