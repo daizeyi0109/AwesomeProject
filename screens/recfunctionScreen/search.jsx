@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-import  SearchResultsScreen from "../searchlist/postlistSearch.js";
+import  SearchResultsScreen from "../searchlist/postlistSearch";
 
 const SearchScreen = ({ navigation }) => {
   return (

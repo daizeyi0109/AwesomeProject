@@ -13,11 +13,12 @@ const RecommendResultsScreen = (props) => {
     const fetchPost = async () => {
       try {
         const postsResult = await API.graphql(graphqlOperation(listPosts));
+        console.log(load);
         console.log(postsResult);
         setPost(postsResult.data.listPosts.items);
-        console.log(load);
         setLoad(true);
         console.log(load);
+
       } catch (e) {
         console.log(e);
       }
@@ -28,7 +29,8 @@ const RecommendResultsScreen = (props) => {
   if (!load) {
     return (
       <View
-        style={{flex: 1,
+        style={{
+          flex: 1,
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
@@ -37,9 +39,10 @@ const RecommendResultsScreen = (props) => {
           padding: 5,
           borderRadius: 10,
           fontSize:20
+          
         }}
       >
-        <Text>Loading movies...</Text>
+        <Text>Loading Items...</Text>
       </View>
     );
   } else {
