@@ -11,7 +11,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 
-s
+// 1111
 
 function Register({ navigation }) {
   // state = {
