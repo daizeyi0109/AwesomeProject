@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Register from "./register";
 import Login from "./login";
 import RegisterType from "./registerType";
+import SearchResultsScreen from "./searchlist/postlistSearch"
 import { Auth } from "aws-amplify";
 
 // Sign-UP
@@ -59,6 +60,7 @@ function IndexScreen() {
                 component={Index}
                 options={{ headerShown: false }}
             />
+
             <indexStack.Screen
                 name="Register"
                 component={Register}

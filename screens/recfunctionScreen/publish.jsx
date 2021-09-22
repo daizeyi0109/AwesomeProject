@@ -7,10 +7,10 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { useFormik } from "formik";
 
 const PublishScreen = ({ navigation }) => {
+
   return (
     <View
       style={{
@@ -34,6 +34,7 @@ const PublishScreen = ({ navigation }) => {
           PublishScreen
         </Text>
       </View>
+
     </View>
   );
 };

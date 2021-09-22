@@ -12,14 +12,14 @@ import BottomTabStack from './nav_02.'
 
 
 const navStack = createNativeStackNavigator();
-function Navigator() { 
-    return(
-    <NavigationContainer>
-        <navStack.Navigator screenOptions={{headerShown: false }}>
-        <navStack.Screen name="IndexScreen"  component={IndexScreen}/>
-        <navStack.Screen name="BottomTabStack"  component={BottomTabStack} options = {{gestureEnabled: false}}/>
-        </navStack.Navigator>
-    </NavigationContainer>
+function Navigator() {
+    return (
+        <NavigationContainer>
+            <navStack.Navigator screenOptions={{ headerShown: false }}>
+                <navStack.Screen name="IndexScreen" component={IndexScreen} />
+                <navStack.Screen name="BottomTabStack" component={BottomTabStack} options={{ gestureEnabled: false }} />
+            </navStack.Navigator>
+        </NavigationContainer>
     )
 
 }

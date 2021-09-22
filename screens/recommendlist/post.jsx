@@ -5,7 +5,7 @@ import {
   StyleSheet,
   Pressable,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 
 import { SimpleLineIcons } from "@expo/vector-icons";
@@ -19,47 +19,50 @@ const Post = (props) => {
 
   return (
     // <Pressable onPress={goToPostPage} style={styles.container}>
-    <Pressable style={styles.container}>
-      {/* Image  */}
-      <Image
-        style={styles.image}
-        source={{
-          uri: posts.image,
-        }}
-      />
+    <>
+      <Pressable style={styles.container}>
+        {/* Image  */}
+        <Image
+          style={styles.image}
+          source={{
+            uri: posts.image,
+          }}
+        />
 
-      {/* Bed & Bedroom  */}
-      <Text style={styles.bedrooms}>
-        {posts.bed} <SimpleLineIcons name="like" size={15} color="black" />{" "}
-        {posts.bedroom}{" "}
-        <SimpleLineIcons name="dislike" size={15} color="black" />
-      </Text>
-
-      {/* Type & Description */}
-      <Text style={styles.description} numberOfLines={2}>
-        {posts.type}. {posts.title}
-      </Text>
-
-      {/*  Old price & new price */}
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Text style={styles.prices}>
-          <Text style={styles.oldPrice}>${posts.oldPrice}</Text>
-          <Text style={styles.price}> ${posts.newPrice} </Text>/ night
+        {/* Bed & Bedroom  */}
+        <Text style={styles.bedrooms}>
+          {posts.bed} <SimpleLineIcons name="like" size={15} color="black" />{" "}
+          {posts.bedroom}{" "}
+          <SimpleLineIcons name="dislike" size={15} color="black" />
         </Text>
-        <TouchableOpacity style={{marginRight:10}}>
-          <Foundation name="indent-more" size={25} color="black" />
-        </TouchableOpacity>
-      </View>
 
-      {/*  Total price */}
-      <Text style={styles.totalPrice}>${posts.newPrice * days} total</Text>
-    </Pressable>
+        {/* Type & Description */}
+        <Text style={styles.description} numberOfLines={2}>
+          {posts.type} ---- {posts.title}
+        </Text>
+
+        {/*  Old price & new price */}
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <Text style={styles.prices}>
+            <Text style={styles.oldPrice}>${posts.oldPrice}</Text>
+            <Text style={styles.price}> ${posts.newPrice} </Text>/ night
+          </Text>
+          <TouchableOpacity style={{ marginRight: 10 }}>
+            <Foundation name="indent-more" size={25} color="black" />
+          </TouchableOpacity>
+        </View>
+
+        {/*  Total price */}
+        <Text style={styles.totalPrice}>${posts.newPrice * days} total</Text>
+      </Pressable>
+      <View style={{ width: "100%",borderBottomWidth:0.5,borderBottomColor: "black"}}></View>
+    </>
   );
 };
 

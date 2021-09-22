@@ -19,6 +19,7 @@ import ChatScreen from "../screens/recfunctionScreen/chat";
 import SearchScreen from "../screens/recfunctionScreen/search";
 import PersonalScreen from "../screens/recfunctionScreen/personal";
 import PublishScreen from "../screens/recfunctionScreen/publish";
+import SearchResultsScreen from "../screens/searchlist/postlistSearch"
 
 import config from "../src/aws-exports"
 // import config from './src/aws-exports'
