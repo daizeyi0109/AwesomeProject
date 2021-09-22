@@ -12,9 +12,9 @@ import { SimpleLineIcons } from "@expo/vector-icons";
 import { Foundation } from "@expo/vector-icons";
 
 const Post = (props) => {
-  // console.log(props);
+  console.log(props);
 
-  const post = props.post;
+  const posts = props.posts;
   const days = 7;
 
   return (
@@ -24,20 +24,20 @@ const Post = (props) => {
       <Image
         style={styles.image}
         source={{
-          uri: post.image,
+          uri: posts.image,
         }}
       />
 
       {/* Bed & Bedroom  */}
       <Text style={styles.bedrooms}>
-        {post.bed} <SimpleLineIcons name="like" size={15} color="black" />{" "}
-        {post.bedroom}{" "}
+        {posts.bed} <SimpleLineIcons name="like" size={15} color="black" />{" "}
+        {posts.bedroom}{" "}
         <SimpleLineIcons name="dislike" size={15} color="black" />
       </Text>
 
       {/* Type & Description */}
       <Text style={styles.description} numberOfLines={2}>
-        {post.type}. {post.title}
+        {posts.type}. {posts.title}
       </Text>
 
       {/*  Old price & new price */}
@@ -49,8 +49,8 @@ const Post = (props) => {
         }}
       >
         <Text style={styles.prices}>
-          <Text style={styles.oldPrice}>${post.oldPrice}</Text>
-          <Text style={styles.price}> ${post.newPrice} </Text>/ night
+          <Text style={styles.oldPrice}>${posts.oldPrice}</Text>
+          <Text style={styles.price}> ${posts.newPrice} </Text>/ night
         </Text>
         <TouchableOpacity style={{marginRight:10}}>
           <Foundation name="indent-more" size={25} color="black" />
@@ -58,7 +58,7 @@ const Post = (props) => {
       </View>
 
       {/*  Total price */}
-      <Text style={styles.totalPrice}>${post.newPrice * days} total</Text>
+      <Text style={styles.totalPrice}>${posts.newPrice * days} total</Text>
     </Pressable>
   );
 };

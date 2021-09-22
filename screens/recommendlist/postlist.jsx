@@ -48,7 +48,7 @@ const RecommendResultsScreen = (props) => {
   } else {
     return (
       <View>
-        <FlatList data={post} renderItem={({ item }) => <Post post={item} />} />
+        <FlatList data={post} renderItem={({ item }) => <Post posts={item} />} />
       </View>
     );
   }
