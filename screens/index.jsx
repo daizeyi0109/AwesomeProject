@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Register from "./register";
 import Login from "./login";
 import RegisterType from "./registerType";
-import SearchResultsScreen from "./searchlist/postlistSearch"
 import { Auth } from "aws-amplify";
 
 // Sign-UP
