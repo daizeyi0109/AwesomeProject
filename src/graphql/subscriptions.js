@@ -11,11 +11,8 @@ export const onCreatePost = /* GraphQL */ `
       description
       bed
       bedroom
-      maxGuests
       oldPrice
       newPrice
-      latitude
-      longitude
       createdAt
       updatedAt
     }
@@ -31,11 +28,8 @@ export const onUpdatePost = /* GraphQL */ `
       description
       bed
       bedroom
-      maxGuests
       oldPrice
       newPrice
-      latitude
-      longitude
       createdAt
       updatedAt
     }
@@ -51,11 +45,8 @@ export const onDeletePost = /* GraphQL */ `
       description
       bed
       bedroom
-      maxGuests
       oldPrice
       newPrice
-      latitude
-      longitude
       createdAt
       updatedAt
     }

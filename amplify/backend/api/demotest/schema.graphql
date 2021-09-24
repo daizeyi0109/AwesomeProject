@@ -8,11 +8,10 @@ type Post @model @aws_api_key{
 
   bed: Int!
   bedroom: Int!
-  maxGuests: Int!
+ 
 
   oldPrice: Float
   newPrice: Float!
 
-  latitude: Float!
-  longitude: Float!
+
 }

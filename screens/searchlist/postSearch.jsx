@@ -53,7 +53,7 @@ const PostSearch = (props) => {
       >
         <Text style={styles.prices}>
           <Text style={styles.oldPrice}>${post.oldPrice}</Text>
-          <Text style={styles.price}> ${post.newPrice} </Text>/ night
+          <Text style={styles.price}> ${post.newPrice} </Text>
         </Text>
         <TouchableOpacity style={{marginRight:10}}>
           <Foundation name="indent-more" size={25} color="black" />

@@ -11,11 +11,8 @@ export const getPost = /* GraphQL */ `
       description
       bed
       bedroom
-      maxGuests
       oldPrice
       newPrice
-      latitude
-      longitude
       createdAt
       updatedAt
     }
@@ -36,11 +33,8 @@ export const listPosts = /* GraphQL */ `
         description
         bed
         bedroom
-        maxGuests
         oldPrice
         newPrice
-        latitude
-        longitude
         createdAt
         updatedAt
       }

@@ -191,21 +191,6 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "maxGuests",
-          "description" : null,
-          "args" : [ ],
-          "type" : {
-            "kind" : "NON_NULL",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Int",
-              "ofType" : null
-            }
-          },
-          "isDeprecated" : false,
-          "deprecationReason" : null
-        }, {
           "name" : "oldPrice",
           "description" : null,
           "args" : [ ],
@@ -218,36 +203,6 @@
           "deprecationReason" : null
         }, {
           "name" : "newPrice",
-          "description" : null,
-          "args" : [ ],
-          "type" : {
-            "kind" : "NON_NULL",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Float",
-              "ofType" : null
-            }
-          },
-          "isDeprecated" : false,
-          "deprecationReason" : null
-        }, {
-          "name" : "latitude",
-          "description" : null,
-          "args" : [ ],
-          "type" : {
-            "kind" : "NON_NULL",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Float",
-              "ofType" : null
-            }
-          },
-          "isDeprecated" : false,
-          "deprecationReason" : null
-        }, {
-          "name" : "longitude",
           "description" : null,
           "args" : [ ],
           "type" : {
@@ -445,15 +400,6 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "maxGuests",
-          "description" : null,
-          "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "ModelIntInput",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
           "name" : "oldPrice",
           "description" : null,
           "type" : {
@@ -464,24 +410,6 @@
           "defaultValue" : null
         }, {
           "name" : "newPrice",
-          "description" : null,
-          "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "ModelFloatInput",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "latitude",
-          "description" : null,
-          "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "ModelFloatInput",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "longitude",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1321,19 +1249,6 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "maxGuests",
-          "description" : null,
-          "type" : {
-            "kind" : "NON_NULL",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Int",
-              "ofType" : null
-            }
-          },
-          "defaultValue" : null
-        }, {
           "name" : "oldPrice",
           "description" : null,
           "type" : {
@@ -1344,32 +1259,6 @@
           "defaultValue" : null
         }, {
           "name" : "newPrice",
-          "description" : null,
-          "type" : {
-            "kind" : "NON_NULL",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Float",
-              "ofType" : null
-            }
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "latitude",
-          "description" : null,
-          "type" : {
-            "kind" : "NON_NULL",
-            "name" : null,
-            "ofType" : {
-              "kind" : "SCALAR",
-              "name" : "Float",
-              "ofType" : null
-            }
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "longitude",
           "description" : null,
           "type" : {
             "kind" : "NON_NULL",
@@ -1445,15 +1334,6 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "maxGuests",
-          "description" : null,
-          "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "ModelIntInput",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
           "name" : "oldPrice",
           "description" : null,
           "type" : {
@@ -1464,24 +1344,6 @@
           "defaultValue" : null
         }, {
           "name" : "newPrice",
-          "description" : null,
-          "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "ModelFloatInput",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "latitude",
-          "description" : null,
-          "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "ModelFloatInput",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "longitude",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -1601,15 +1463,6 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "maxGuests",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Int",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
           "name" : "oldPrice",
           "description" : null,
           "type" : {
@@ -1620,24 +1473,6 @@
           "defaultValue" : null
         }, {
           "name" : "newPrice",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Float",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "latitude",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "Float",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "longitude",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
@@ -1714,6 +1549,25 @@
         "enumValues" : null,
         "possibleTypes" : null
       }, {
+        "kind" : "ENUM",
+        "name" : "ModelSortDirection",
+        "description" : null,
+        "fields" : null,
+        "inputFields" : null,
+        "interfaces" : null,
+        "enumValues" : [ {
+          "name" : "ASC",
+          "description" : null,
+          "isDeprecated" : false,
+          "deprecationReason" : null
+        }, {
+          "name" : "DESC",
+          "description" : null,
+          "isDeprecated" : false,
+          "deprecationReason" : null
+        } ],
+        "possibleTypes" : null
+      }, {
         "kind" : "INPUT_OBJECT",
         "name" : "ModelBooleanInput",
         "description" : null,
@@ -1757,25 +1611,6 @@
         } ],
         "interfaces" : null,
         "enumValues" : null,
-        "possibleTypes" : null
-      }, {
-        "kind" : "ENUM",
-        "name" : "ModelSortDirection",
-        "description" : null,
-        "fields" : null,
-        "inputFields" : null,
-        "interfaces" : null,
-        "enumValues" : [ {
-          "name" : "ASC",
-          "description" : null,
-          "isDeprecated" : false,
-          "deprecationReason" : null
-        }, {
-          "name" : "DESC",
-          "description" : null,
-          "isDeprecated" : false,
-          "deprecationReason" : null
-        } ],
         "possibleTypes" : null
       }, {
         "kind" : "OBJECT",
@@ -2635,6 +2470,23 @@
         "onFragment" : false,
         "onField" : false
       }, {
+        "name" : "deprecated",
+        "description" : null,
+        "locations" : [ "FIELD_DEFINITION", "ENUM_VALUE" ],
+        "args" : [ {
+          "name" : "reason",
+          "description" : null,
+          "type" : {
+            "kind" : "SCALAR",
+            "name" : "String",
+            "ofType" : null
+          },
+          "defaultValue" : "\"No longer supported\""
+        } ],
+        "onOperation" : false,
+        "onFragment" : false,
+        "onField" : false
+      }, {
         "name" : "aws_auth",
         "description" : "Directs the schema to enforce authorization on a field",
         "locations" : [ "FIELD_DEFINITION" ],
@@ -2651,23 +2503,6 @@
             }
           },
           "defaultValue" : null
-        } ],
-        "onOperation" : false,
-        "onFragment" : false,
-        "onField" : false
-      }, {
-        "name" : "deprecated",
-        "description" : null,
-        "locations" : [ "FIELD_DEFINITION", "ENUM_VALUE" ],
-        "args" : [ {
-          "name" : "reason",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "String",
-            "ofType" : null
-          },
-          "defaultValue" : "\"No longer supported\""
         } ],
         "onOperation" : false,
         "onFragment" : false,

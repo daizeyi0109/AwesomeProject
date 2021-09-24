@@ -71,9 +71,6 @@ const SearchScreen = ({ navigation }) => {
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            // alignContent: "center",
-            // backgroundColor: "blue",
-            // height: 70,
           }}
         >
           {/* <View> */}

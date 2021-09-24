@@ -51,7 +51,7 @@ const Post = (props) => {
         >
           <Text style={styles.prices}>
             <Text style={styles.oldPrice}>${posts.oldPrice}</Text>
-            <Text style={styles.price}> ${posts.newPrice} </Text>/ night
+            <Text style={styles.price}> ${posts.newPrice} </Text>
           </Text>
           <TouchableOpacity style={{ marginRight: 10 }}>
             <Foundation name="indent-more" size={25} color="black" />
