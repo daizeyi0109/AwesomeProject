@@ -12,6 +12,8 @@ import {
 import { Formik } from "formik";
 import { API, graphqlOperation } from "aws-amplify";
 import * as mutations from "../../src/graphql/mutations";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
 const PublishScreen = ({ navigation }) => {
   const currentIndexRef = useRef({
     image: "",
@@ -53,6 +55,7 @@ const PublishScreen = ({ navigation }) => {
         left: "50%",
         marginLeft: -172,
         height: "100%",
+
       }}
     >
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -77,17 +80,50 @@ const PublishScreen = ({ navigation }) => {
             oldPrice: 0,
             newPrice: 0,
           }}
+          validate={(values) => {
+            let errors = {};
+            if (values.image.length === 0) {
+              errors.image = "Image URL can not be empty";
+            }
+            if (values.type.length === 0) {
+              errors.type = "Type can not be empty";
+            }
+            if (values.title.length === 0) {
+              errors.title = "Title can not be empty";
+            }
+            if (values.description.length === 0) {
+              errors.description = "Description can not be empty";
+            }
+            if (!values.oldPrice) {
+              errors.oldPrice = "Required";
+            }
+            if (!values.newPrice) {
+              errors.newPrice = "Required";
+            }
+            return errors;
+          }}
           onSubmit={(values) => testfunction(values)}
         >
-          {({ handleChange, handleBlur, handleSubmit, values }) => (
+          {({ handleChange, handleBlur, handleSubmit, values, errors }) => (
             <View style={{ marginTop: 20 }}>
-              <TextInput
+               <TextInput
                 onChangeText={handleChange("image")}
                 onBlur={handleBlur("image")}
                 value={values.image}
                 style={styles.textInput}
                 placeholder="image"
               />
+                {errors.image ? (
+                <Text style={styles.tips}>
+                  <MaterialCommunityIcons
+                    name="exclamation-thick"
+                    size={24}
+                    color="red"
+                  />
+                  {errors.image}
+                </Text>
+              ) : null}
+
               <TextInput
                 onChangeText={handleChange("type")}
                 onBlur={handleBlur("type")}
@@ -95,6 +131,17 @@ const PublishScreen = ({ navigation }) => {
                 style={styles.textInput}
                 placeholder="type"
               />
+                {errors.title ? (
+                <Text style={styles.tips}>
+                  <MaterialCommunityIcons
+                    name="exclamation-thick"
+                    size={24}
+                    color="red"
+                  />
+                  {errors.title}
+                </Text>
+              ) : null}
+
               <TextInput
                 onChangeText={handleChange("title")}
                 onBlur={handleBlur("title")}
@@ -102,6 +149,16 @@ const PublishScreen = ({ navigation }) => {
                 style={styles.textInput}
                 placeholder="title"
               />
+              {errors.title ? (
+                <Text style={styles.tips}>
+                  <MaterialCommunityIcons
+                    name="exclamation-thick"
+                    size={24}
+                    color="red"
+                  />
+                  {errors.title}
+                </Text>
+              ) : null}
               <TextInput
                 onChangeText={handleChange("description")}
                 onBlur={handleBlur("description")}
@@ -109,6 +166,16 @@ const PublishScreen = ({ navigation }) => {
                 style={styles.textInput}
                 placeholder="description"
               />
+              {errors.description ? (
+                <Text style={styles.tips}>
+                  <MaterialCommunityIcons
+                    name="exclamation-thick"
+                    size={24}
+                    color="red"
+                  />
+                  {errors.description}
+                </Text>
+              ) : null}
               <TextInput
                 onChangeText={handleChange("oldPrice")}
                 onBlur={handleBlur("oldPrice")}
@@ -116,6 +183,16 @@ const PublishScreen = ({ navigation }) => {
                 style={styles.textInput}
                 placeholder="oldPrice"
               />
+              {errors.oldPrice ? (
+                <Text style={styles.tips}>
+                  <MaterialCommunityIcons
+                    name="exclamation-thick"
+                    size={24}
+                    color="red"
+                  />
+                  {errors.oldPrice}
+                </Text>
+              ) : null}
               <TextInput
                 onChangeText={handleChange("newPrice")}
                 onBlur={handleBlur("newPrice")}
@@ -123,7 +200,19 @@ const PublishScreen = ({ navigation }) => {
                 style={styles.textInput}
                 placeholder="newPrice"
               />
-              <Button onPress={handleSubmit} title="Submit" />
+              {errors.newPrice ? (
+                <Text style={styles.tips}>
+                  <MaterialCommunityIcons
+                    name="exclamation-thick"
+                    size={24}
+                    color="red"
+                  />
+                  {errors.newPrice}
+                </Text>
+              ) : null}
+              <TouchableOpacity onPress={handleSubmit} style={styles.upload}>
+              <MaterialCommunityIcons name="arrow-up-thick" size={60} color="black" />
+              </TouchableOpacity>
             </View>
           )}
         </Formik>
@@ -151,10 +240,19 @@ const styles = StyleSheet.create({
   },
   textInput: {
     paddingLeft: 10,
-    marginBottom: 16,
+    marginBottom: 10,
     height: 52,
     borderColor: "#000000",
     borderWidth: 2,
+  },
+  tips: {
+    color: "rgb(248,0,22)",
+    marginBottom: 10,
+  },
+  upload: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 
