@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   View,
@@ -10,9 +11,13 @@ import {
 
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { Foundation } from "@expo/vector-icons";
+import DetailScreen from "../Detail/detail";
 
-const Post = (props) => {
+
+
+const Post = (props,{navigation}) => {
   console.log(props);
+  // console.log(na)
 
   const posts = props.posts;
   const days = 7;
@@ -53,7 +58,7 @@ const Post = (props) => {
             <Text style={styles.oldPrice}>${posts.oldPrice}</Text>
             <Text style={styles.price}> ${posts.newPrice} </Text>
           </Text>
-          <TouchableOpacity style={{ marginRight: 10 }}>
+          <TouchableOpacity style={{ marginRight: 10 }} onPress={() => navigation.navigate(DetailScreen)}>
             <Foundation name="indent-more" size={25} color="black" />
           </TouchableOpacity>
         </View>
@@ -61,14 +66,20 @@ const Post = (props) => {
         {/*  Total price */}
         <Text style={styles.totalPrice}>${posts.newPrice * days} total</Text>
       </Pressable>
-      <View style={{ width: "100%",borderBottomWidth:0.5,borderBottomColor: "black"}}></View>
+      <View
+        style={{
+          width: "100%",
+          borderBottomWidth: 0.5,
+          borderBottomColor: "black",
+        }}
+      ></View>
     </>
   );
 };
 
+
 const styles = StyleSheet.create({
   container: {
-    // margin: 20,
     marginTop: 15,
     marginBottom: 20,
     backgroundColor: "#fff",

@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import {
   Text,
   View,
-  TextInput,
   StyleSheet,
   Image,
   TouchableOpacity,
-  SafeAreaView,
-  Dimensions,
   ScrollView,
+  Button,
 } from "react-native";
 import Swiper from "react-native-swiper";
 import RecommendResultsScreen from "../recommendlist/postlist";
+import DetailScreen from "../Detail/detail";
 
-
-const RecommendScreen = ({ navigation }) => {
+const RecommendScreen = ( {route,navigation} ) => {
+  console.log(route.params);
   return (
     <View
       style={{
@@ -35,8 +34,8 @@ const RecommendScreen = ({ navigation }) => {
               fontSize: 40,
               fontFamily: "Futura",
               shadowColor: "rgba(0,0,0,0.5)",
-              shadowOffset: { width: 4, height: 4 }, 
-              shadowOpacity: 0.67, 
+              shadowOffset: { width: 4, height: 4 },
+              shadowOpacity: 0.67,
             }}
           >
             Recommend
@@ -129,13 +128,17 @@ const RecommendScreen = ({ navigation }) => {
             YOU MAY LIKE
           </Text>
         </View>
+        <Button title="Go to detail" onPress={() => navigation.navigate(DetailScreen)} />
 
-        <RecommendResultsScreen/>
+        <RecommendResultsScreen />
       </ScrollView>
     </View>
   );
 };
 
+
+
+export default RecommendScreen;
 const styles = StyleSheet.create({
   title: {
     marginTop: 104,
@@ -175,4 +178,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default RecommendScreen;
+

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, FlatList, Text } from "react-native";
 import Post from "./post";
-import feed from "../../assets/data/feed";
+import RecommendScreen from "../recfunctionScreen/recommend"
 import { API, graphqlOperation } from "aws-amplify";
 import { listPosts } from "../../src/graphql/queries.js";
 
