@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { View, FlatList, Text } from "react-native";
+import {
+  View,
+  FlatList,
+  Text,
+  StyleSheet,
+  Pressable,
+  Image,
+  TouchableOpacity,
+} from "react-native";
 import Post from "./post";
-import RecommendScreen from "../recfunctionScreen/recommend"
 import { API, graphqlOperation } from "aws-amplify";
 import { listPosts } from "../../src/graphql/queries.js";
 
-const RecommendResultsScreen = (props) => {
+const RecommendResultsScreen = ({ navigation }) => {
+  console.log("1231231231");
+  console.log(navigation);
   const [post, setPost] = useState([]);
   const [load, setLoad] = useState(false);
 
@@ -18,7 +27,6 @@ const RecommendResultsScreen = (props) => {
         setPost(postsResult.data.listPosts.items);
         setLoad(true);
         console.log(load);
-
       } catch (e) {
         console.log(e);
       }
@@ -38,8 +46,7 @@ const RecommendResultsScreen = (props) => {
           marginBottom: 10,
           padding: 5,
           borderRadius: 10,
-          fontSize:20
-          
+          fontSize: 20,
         }}
       >
         <Text>Loading Items...</Text>
@@ -48,10 +55,12 @@ const RecommendResultsScreen = (props) => {
   } else {
     return (
       <View>
-        <FlatList data={post} renderItem={({ item }) => <Post posts={item} />} />
+        <FlatList
+          data={post}
+          renderItem={({ item }) => <Post posts={item} />}
+        />
       </View>
     );
   }
 };
-
 export default RecommendResultsScreen;

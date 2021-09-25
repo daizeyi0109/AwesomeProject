@@ -10,9 +10,12 @@ const PostStack = createNativeStackNavigator();
 export default function PostDetailScreen() {
   return (
     <PostStack.Navigator initialRouteName="DetailScreen">
-      <PostStack.Screen name="postDetailScreen" component={RecommendScreen} />
-      <PostStack.Screen name="DetailScreen" component={DetailScreen} />
       <PostStack.Screen name="Post" component={Post} />
+      <PostStack.Screen
+        name="postRecommendScreen"
+        component={RecommendScreen}
+      />
+      <PostStack.Screen name="DetailScreen" component={DetailScreen} />
     </PostStack.Navigator>
   );
 }

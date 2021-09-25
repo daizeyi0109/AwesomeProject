@@ -16,6 +16,7 @@ import DetailScreen from "../Detail/detail";
 
 
 const Post = (props,{navigation}) => {
+
   console.log(props);
   // console.log(na)
 

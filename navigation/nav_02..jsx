@@ -20,11 +20,11 @@ import SearchScreen from "../screens/recfunctionScreen/search";
 import PersonalScreen from "../screens/recfunctionScreen/personal";
 import PublishScreen from "../screens/recfunctionScreen/publish";
 
-import config from "../src/aws-exports"
+import config from "../src/aws-exports";
 // import config from './src/aws-exports'
-import Amplify from 'aws-amplify'
-import { withAuthenticator } from 'aws-amplify-react-native'
-Amplify.configure(config)
+import Amplify from "aws-amplify";
+import { withAuthenticator } from "aws-amplify-react-native";
+Amplify.configure(config);
 
 const BottomTab = createBottomTabNavigator();
 
@@ -73,7 +73,7 @@ function BottomTabStack() {
         tabBarInactiveTintColor: "gray",
         tabBarShowIcon: "true",
         headerShown: false,
-        initialRouteName: "Recommend"
+        initialRouteName: "Recommend",
       })}
     >
       <BottomTab.Screen name="Recommend" component={RecommendScreen} />
@@ -83,24 +83,24 @@ function BottomTabStack() {
         component={PublishScreen}
         options={{
           tabBarLabel: "",
-          tabBarIcon: ({  }) => (
+          tabBarIcon: ({}) => (
             <View
-            style={{
-              position: 'absolute',
-              bottom: -20, // space from bottombar
-              height: 70,
-              width: 70,
-              justifyContent: 'center',
-              alignItems: 'center',
-              shadowColor: "rgba(0,0,0,0.5)",
-              shadowOffset: { height: 4 }, 
-              shadowOpacity: 0.67,
-            }}
+              style={{
+                position: "absolute",
+                bottom: -20, // space from bottombar
+                height: 70,
+                width: 70,
+                justifyContent: "center",
+                alignItems: "center",
+                shadowColor: "rgba(0,0,0,0.5)",
+                shadowOffset: { height: 4 },
+                shadowOpacity: 0.67,
+              }}
             >
-            {/* <Ionicons name="add-circle-outline" color="grey" size={68}/> */}
-            <Image source={require("../assets/images/post.png")}/>
+              {/* <Ionicons name="add-circle-outline" color="grey" size={68}/> */}
+              <Image source={require("../assets/images/post.png")} />
             </View>
-          )
+          ),
         }}
       />
       <BottomTab.Screen name="Chat" component={ChatScreen} />
@@ -109,4 +109,4 @@ function BottomTabStack() {
   );
 }
 
-export default  withAuthenticator (BottomTabStack);
+export default withAuthenticator(BottomTabStack);
