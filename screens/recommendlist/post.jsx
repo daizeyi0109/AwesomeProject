@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   View,
@@ -12,19 +11,19 @@ import {
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { Foundation } from "@expo/vector-icons";
 import DetailScreen from "../Detail/detail";
+import { useNavigation } from "@react-navigation/native";
 
-
-
-const Post = (props,{navigation}) => {
-
+const Post = (props) => {
+  const navigation = useNavigation();
   console.log(props);
-  // console.log(na)
 
   const posts = props.posts;
+  const id = props.posts.id;
+  console.log(id);
   const days = 7;
 
   return (
-    // <Pressable onPress={goToPostPage} style={styles.container}>
+    // <Pressable onPress={goToPostPage} style={styles.containerﬁ}>
     <>
       <Pressable style={styles.container}>
         {/* Image  */}
@@ -59,7 +58,10 @@ const Post = (props,{navigation}) => {
             <Text style={styles.oldPrice}>${posts.oldPrice}</Text>
             <Text style={styles.price}> ${posts.newPrice} </Text>
           </Text>
-          <TouchableOpacity style={{ marginRight: 10 }} onPress={() => navigation.navigate(DetailScreen)}>
+          <TouchableOpacity
+            style={{ marginRight: 10 }}
+            onPress={() => navigation.navigate("DetailScreen", {itemid:id})}
+          >
             <Foundation name="indent-more" size={25} color="black" />
           </TouchableOpacity>
         </View>
@@ -77,7 +79,6 @@ const Post = (props,{navigation}) => {
     </>
   );
 };
-
 
 const styles = StyleSheet.create({
   container: {

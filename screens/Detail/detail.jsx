@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import React, { Component } from "react";
+import { Text, View } from "react-native";
+import { useRoute } from "@react-navigation/native";
+export const DetailScreen = () => {
+  const route = useRoute();
+  console.log(route.params.itemid);
+  return (
+    <View style={{marginTop: 100}}>
+      <Text> {route.params.itemid}</Text>
+    </View>
+  );
+};
 
-export class  DetailScreen extends Component {
-    render() {
-        return (
-            <View>
-                <Text> textInComponent </Text>
-            </View>
-        )
-    }
-}
-
-export default  DetailScreen;
+export default DetailScreen;

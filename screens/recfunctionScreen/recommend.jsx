@@ -127,13 +127,10 @@ const RecommendScreen = ({ navigation }) => {
             YOU MAY LIKE
           </Text>
         </View>
-        <Button
-          title="Go to detail"
-          onPress={() => navigation.navigate(DetailScreen)}
-        />
+
 
         {/* <RecommendResultsScreen nav={navigation}/> */}
-     
+
         <RecommendResultsScreen />
       </ScrollView>
     </View>
@@ -178,41 +175,5 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 50,
   },
-  container: {
-    marginTop: 15,
-    marginBottom: 20,
-    backgroundColor: "#fff",
-    borderRadius: 10,
-    padding: 5,
-  },
-  image: {
-    width: "100%",
-    aspectRatio: 3 / 2,
-    resizeMode: "cover",
-    borderRadius: 10,
-  },
-
-  bedrooms: {
-    marginVertical: 10,
-    color: "#5b5b5b",
-  },
-  description: {
-    fontSize: 18,
-    lineHeight: 26,
-  },
-  prices: {
-    fontSize: 18,
-    marginVertical: 10,
-  },
-  oldPrice: {
-    color: "#5b5b5b",
-    textDecorationLine: "line-through",
-  },
-  price: {
-    fontWeight: "bold",
-  },
-  totalPrice: {
-    color: "#5b5b5b",
-    textDecorationLine: "underline",
-  },
+  
 });

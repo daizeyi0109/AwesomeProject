@@ -13,8 +13,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { listPosts } from "../../src/graphql/queries.js";
 
 const RecommendResultsScreen = ({ navigation }) => {
-  console.log("1231231231");
-  console.log(navigation);
+ 
   const [post, setPost] = useState([]);
   const [load, setLoad] = useState(false);
 
