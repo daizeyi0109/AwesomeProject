@@ -12,7 +12,6 @@ import { SimpleLineIcons } from "@expo/vector-icons";
 import { Foundation } from "@expo/vector-icons";
 import DetailScreen from "../Detail/detail";
 import { useNavigation } from "@react-navigation/native";
-
 const Post = (props) => {
   const navigation = useNavigation();
   console.log(props);
@@ -60,7 +59,7 @@ const Post = (props) => {
           </Text>
           <TouchableOpacity
             style={{ marginRight: 10 }}
-            onPress={() => navigation.navigate("DetailScreen", {itemid:id})}
+            onPress={() => navigation.navigate("DetailScreen", { itemid: id })}
           >
             <Foundation name="indent-more" size={25} color="black" />
           </TouchableOpacity>
