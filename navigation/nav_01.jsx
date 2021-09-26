@@ -33,7 +33,7 @@ function Navigator() {
             headerTitle: "Detail Screen",
             headerBackTitle: "",
             headerTitleStyle: { color: "white" },
-            headerStyle: { backgroundColor: "rgb(134,134,132)" },
+            headerStyle: { backgroundColor: "tomato" },
             headerLeft: () => (
               <TouchableOpacity onPress={() => navigation.goBack()}>
                 <Image source={require("../assets/images/backicon.png")} />
