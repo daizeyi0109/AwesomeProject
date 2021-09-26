@@ -13,5 +13,4 @@ type Post @model @aws_api_key{
   oldPrice: Float
   newPrice: Float!
 
-
 }
