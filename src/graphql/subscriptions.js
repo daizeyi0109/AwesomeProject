@@ -13,6 +13,7 @@ export const onCreatePost = /* GraphQL */ `
       bedroom
       oldPrice
       newPrice
+      Userid
       createdAt
       updatedAt
     }
@@ -30,6 +31,7 @@ export const onUpdatePost = /* GraphQL */ `
       bedroom
       oldPrice
       newPrice
+      Userid
       createdAt
       updatedAt
     }
@@ -47,6 +49,43 @@ export const onDeletePost = /* GraphQL */ `
       bedroom
       oldPrice
       newPrice
+      Userid
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateUser = /* GraphQL */ `
+  subscription OnCreateUser {
+    onCreateUser {
+      id
+      Username
+      Userid
+      type
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateUser = /* GraphQL */ `
+  subscription OnUpdateUser {
+    onUpdateUser {
+      id
+      Username
+      Userid
+      type
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteUser = /* GraphQL */ `
+  subscription OnDeleteUser {
+    onDeleteUser {
+      id
+      Username
+      Userid
+      type
       createdAt
       updatedAt
     }

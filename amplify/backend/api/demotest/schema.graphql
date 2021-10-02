@@ -13,4 +13,15 @@ type Post @model @aws_api_key{
   oldPrice: Float
   newPrice: Float!
 
+  Userid: Int!
+
+}
+type User @model @aws_api_key{
+  id: ID!
+
+  Username: String!
+  Userid: Int!
+  
+  type: String!
+  
 }

@@ -16,6 +16,7 @@ export const createPost = /* GraphQL */ `
       bedroom
       oldPrice
       newPrice
+      Userid
       createdAt
       updatedAt
     }
@@ -36,6 +37,7 @@ export const updatePost = /* GraphQL */ `
       bedroom
       oldPrice
       newPrice
+      Userid
       createdAt
       updatedAt
     }
@@ -56,6 +58,52 @@ export const deletePost = /* GraphQL */ `
       bedroom
       oldPrice
       newPrice
+      Userid
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createUser = /* GraphQL */ `
+  mutation CreateUser(
+    $input: CreateUserInput!
+    $condition: ModelUserConditionInput
+  ) {
+    createUser(input: $input, condition: $condition) {
+      id
+      Username
+      Userid
+      type
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateUser = /* GraphQL */ `
+  mutation UpdateUser(
+    $input: UpdateUserInput!
+    $condition: ModelUserConditionInput
+  ) {
+    updateUser(input: $input, condition: $condition) {
+      id
+      Username
+      Userid
+      type
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteUser = /* GraphQL */ `
+  mutation DeleteUser(
+    $input: DeleteUserInput!
+    $condition: ModelUserConditionInput
+  ) {
+    deleteUser(input: $input, condition: $condition) {
+      id
+      Username
+      Userid
+      type
       createdAt
       updatedAt
     }

@@ -13,6 +13,7 @@ export const getPost = /* GraphQL */ `
       bedroom
       oldPrice
       newPrice
+      Userid
       createdAt
       updatedAt
     }
@@ -35,6 +36,38 @@ export const listPosts = /* GraphQL */ `
         bedroom
         oldPrice
         newPrice
+        Userid
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getUser = /* GraphQL */ `
+  query GetUser($id: ID!) {
+    getUser(id: $id) {
+      id
+      Username
+      Userid
+      type
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listUsers = /* GraphQL */ `
+  query ListUsers(
+    $filter: ModelUserFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        Username
+        Userid
+        type
         createdAt
         updatedAt
       }
